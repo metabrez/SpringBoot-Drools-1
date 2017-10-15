@@ -1,0 +1,14 @@
+import com.mouni.model.CreditDetails
+
+rule "Offer for Score<500"
+	when
+		creditDetailsObject: CreditDetails(score<500)
+	then
+		creditDetailsObject.setMessage("error!!!!!!!");
+	end
+rule "Offer for Gold"
+	when
+		creditDetailsObject: CreditDetails(score>=500)
+	then
+		creditDetailsObject.setMessage("Approved");
+	end

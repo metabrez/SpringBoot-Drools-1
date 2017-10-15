@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: SpringBoot-Drools
+
+server:
+  port: 8086
+
